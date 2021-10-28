@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Digite seu nome:');
+        
+        var n = Number(window.prompt('Digite um número:'))
+
+        var salario = Number(window.prompt('Digite seu salário:'))
+        
+        /*
+        document.write
+        - Retorna dados no documento html
+        */
+
+        document.write(`Olá ${nome}! Seu nome possui ${nome.length} letras.</br>`);
+        document.write(`Seu nome com todas as letras maiúsculas fica: ${nome.toUpperCase()}.</br>`);
+        document.write(`Seu nome com todas as letras minúsculas fica: ${nome.toLowerCase()}.</br>`);
+        
+        /*
+        variavel.length
+        - Retorna a quantidade de caracteres na variavel
+        
+        variavel.toUpperCase()
+        - Retorna a variavel escrita com letras maiúsculas
+        
+        variavel.toLowerCase()
+        - Retorna a variavel escrita com letras minúsculas
+        */
+
+        document.write(`O número digitado foi ${n.toFixed(4).replace('.', ',')}</br>`);
+
+        /*
+        variavel.toFixed(x)
+        - Retorna x casas decimais na variavel
+
+        variavel.replace('x', 'y')
+        - Retorna a variavel com a substituição de x por y
+        */
+
+        document.write(`Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`);
+        document.write(`Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}</br>`);
+        document.write(`Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}</br>`);
+
+
+    </script>
+</body>
+</html>

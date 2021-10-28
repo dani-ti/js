@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Código</title>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <script>
+
+        /*
+        O comando prompt trata, inicialmente, o valor atribuido como string
+        */
+        
+        var n1 = Number(window.prompt('Digite um número'));
+        var n2 = Number(window.prompt('Digite outro número'));
+        var somastring = n1.toString() + String(n2);
+        var somanumber = n1 + n2;
+
+        /*
+        Conversão para Número
+
+        Number.parseInt()
+        - Converte para um número inteiro
+        
+        Number.parseFloat()
+        - Converte para um número real
+        
+        Number()
+        - Converte para um número inteiro ou real conforme os valores tratados (JS decide automaticamente)
+        */
+        
+        /*
+        Conversão para String
+
+        String() ou variavel.toString()
+        - Converte para uma string
+        */
+
+        window.alert(`A concatenação dos números ${n1} e ${n2} é ${somastring}`)
+        window.alert(`A adição dos números ${n1} e ${n2} é ${somanumber}`)
+        
+        /*
+        Delimitação por Crase (``)
+        - Template string
+        - Para interpolar
+
+        ${}
+        - Place Holder
+        */
+
+    </script>
+</body>
+</html>

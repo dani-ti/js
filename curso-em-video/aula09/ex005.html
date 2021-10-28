@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 1em Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros Passos em DOM</h1>
+    <p>Este é o <strong name="enfase">primeiro</strong> parágrafo.</p>
+    <p>Este é o segundo parágrafo.</p>
+    <div id="div1">Primeira div</div>
+    <div id="div2" class='c_div'>Segunda div</div>
+    <script>
+
+        var p1 = window.document.getElementsByTagName('p')[0];
+        // [0] = primeiro parágrafo
+        var p2 = window.document.getElementsByTagName('p')[1];
+        // [1] = segundo parágrafo
+        var corpo = window.document.body
+
+        var d1 = window.document.getElementById('div1')
+
+        var d2 = window.document.querySelector('div#div2')
+
+        var divs = window.document.querySelector('div.c_div')
+
+        var en = window.document.getElementsByName('enfase')[0]
+
+        /*
+        No caso de haver mais de um elemento do mesmo tipo, os colchetes, localizados após o 'endereço' da árvore DOM, são utilizados para selecionar qual elemento deseja-se
+        No caso, verifica-se que há mais de um elemento do mesmo tipo em 'Elements', de 'getElements', pois está no plural
+        */
+
+        window.document.write(`No primeiro parágrafo, o texto escrito é: ${p1.innerText}</br>`);
+        window.document.write(`No primeiro parágrafo, o texto escrito conforme a marcação HTML (com tags filhas) é: ${p1.innerHTML}`);
+
+        p2.style.color = 'red'
+        corpo.style.background = 'blueviolet'
+        en.style.fontSize = '1.5em'
+
+        div1.style.color = 'orange'
+        div2.style.color = 'yellow'
+        divs.style.background = 'green'
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Nacionalidade</title>
+    <style>
+
+        body {
+            font: normal 1.3em Arial, sans-serif;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+        span {
+            background-color: turquoise;
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    <p>Digite o país em que você nasceu: </p>
+    <p>
+        <input type="text" id="input_nacionalidade">
+        <input type="button" value="Verificar" id="input_verificar">
+    </p>
+    <div id="res"></div>
+    <script>
+        window.document.getElementById('input_verificar').addEventListener('click', verificar)
+        function verificar(){
+            var txt_nacionalidade = window.document.getElementById('input_nacionalidade').value.toLowerCase()
+            if(txt_nacionalidade == 'brasil'){
+                res.innerHTML = `<p>Você é <span>BRASILEIRO!</span><p>`
+            }
+            
+            else{
+                res.innerHTML = `<p>Você é <span>ESTRANGEIRO!</span><p>`
+            }
+
+        }
+    </script>
+</body>
+</html>

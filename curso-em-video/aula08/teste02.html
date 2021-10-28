@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        var idade = Number(window.prompt('Digite sua idade: '));
+        var estado = window.prompt('Digite em que estado você está: ');
+        var estado_m = estado.toLowerCase()
+        var sexo = window.prompt('Você é do sexo M ou F: ');
+        var sexo_m = sexo.toLowerCase()
+        var salario = Number(window.prompt('Digite seu salário: '));
+
+        var tst_idade = idade >= 15 && idade <= 20 ? 'está' : 'não está'
+        var tst_estado = estado_m == 'são paulo' ? 'está' : 'não está' 
+        var tst_sexo = sexo_m == 'm' ? 'é' : 'não é' 
+        var tst_salario = salario >= 1500 ? 'superior' : 'inferior' 
+
+        document.write(`Sua idade ${tst_idade} entre 15 e 20.</br>`);
+        document.write(`Você ${tst_estado} em São Paulo.</br>`);
+        document.write(`Você ${tst_sexo} um homem.</br>`);
+        document.write(`Você possui um salário ${tst_salario} a R$1500.`);
+    </script>
+</body>
+</html>

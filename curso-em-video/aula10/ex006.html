@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#div1 {
+            font: normal 1.5em Arial, sans-serif;
+            background-color: turquoise;
+            color: indigo;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Os eventos DOM podem ser configurados dentro do HTML, nas tags
+        - Exemplo:
+        onclick = "nomedoeventoaoclicar()"
+        onmouseenter = "nomedoeventoaomouseentrar()"
+        onmouseout = "nomedoeventoaomousesair()"
+    -->
+    <div id="div1" onclick="clicar()">Interaja</div>
+
+    <script>
+        
+        /*
+        Os eventos DOM podem ser configurados dentro do script, com o comando:
+        .addEventListener('evento', nomedoevento)
+        */
+        
+        var div_div1 = window.document.getElementById('div1');
+        div_div1.addEventListener('mouseenter', entrar);
+        div_div1.addEventListener('mouseout', sair);
+
+        function clicar(){
+
+            div_div1.innerText = 'Clicou!'
+
+            div_div1.style.backgroundColor = 'pink'
+        }
+
+        function entrar(){
+
+            div_div1.innerText = 'Entrou!'
+        }
+
+        function sair(){
+            
+            div_div1.innerText = 'Saiu!'
+
+            div_div1.style.backgroundColor = 'turquoise'
+        }
+    </script>
+</body>
+</html>
